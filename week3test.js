@@ -1,3 +1,14 @@
-module.exports = {
-  test: [2, 1, 12, 13, 16, 10, 9, 5, 18, 8, 17, 20, 19, 3, 4, 11, 14, 6, 7, 15],
+const getMedian = (a) => {
+  let len = a.length;
+  let first = a[0];
+  let last = a[len - 1];
+  let middle = len % 2 === 0 ? a[len / 2 - 1] : a[Math.floor(len / 2)];
+  let three = [first, last, middle];
+  three.sort((a, b) => a - b);
+  console.log(three);
+  let median = three[1];
+  return median;
 };
+
+let array = [20, 19];
+console.log(getMedian(array));
