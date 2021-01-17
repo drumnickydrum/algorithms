@@ -4,6 +4,7 @@ const mergeSort = (array) => {
   let sortedLeft = mergeSort(array);
   let sortedRight = mergeSort(arrayRight);
   let sorted = [];
+  console.log([...sortedLeft, ...sortedRight]);
   for (
     let i = 0, l = 0, r = 0;
     i < sortedLeft.length + sortedRight.length;
@@ -28,5 +29,5 @@ const mergeSort = (array) => {
   return sorted;
 };
 
-let result = mergeSort([8, 2, 56, 9, 78, 0, 3, 543, 7, 2346, 8, 9, 1, 345, 98]);
+let result = mergeSort([5, 3, 8, 9, 1, 7, 0, 2, 6, 4]);
 console.log(result);
